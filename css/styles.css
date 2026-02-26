@@ -1,0 +1,322 @@
+/* VARIÁVEIS DE TEMA */
+
+:root {
+  --bg: #f5f5f5;
+  --bg-card: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #555;
+  --accent: #007bff;
+  --border: #ddd;
+
+  --radius: 8px;
+  --max-width: 1000px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* Tema escuro troca apenas cores */
+[data-theme="dark"] {
+  --bg: #121212;
+  --bg-card: #1e1e1e;
+  --text: #e6e6e6;
+  --text-muted: #b4b4b4;
+  --accent: #6aa8ff;
+  --border: #2a2a2a;
+  --shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+.alternar-tema svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* BASE DO SITE */
+
+* { box-sizing: border-box; }
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.55;
+  transition: background .25s, color .25s;
+}
+
+/* coluna central de conteúdo */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 1rem 0;
+}
+
+section { margin-bottom: 2rem; }
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.nome { margin: 0; font-size: 2rem; }
+
+.funcao {
+  color: var(--accent);
+  font-weight: 600;
+  margin: .5rem 0 1rem;
+}
+
+.summary {
+  max-width: var(--max-width);
+  margin: auto;
+  color: var(--text-muted);
+}
+
+
+/* botão de alternar tema */
+.alternar-tema {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.alternar-tema:hover { color: var(--accent); }
+
+
+/* BOTÕES */
+
+.botao {
+  display: inline-block;
+  text-decoration: none;
+  padding: .45rem .75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+/* botão download CV */
+.botao-download {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  background: var(--accent);
+  color: #fff;
+}
+
+.botao-primario {
+  background: var(--accent);
+  color: #fff;
+}
+
+
+/* NAVEGAÇÃO */
+
+.nav-principal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.nav-principal a {
+  text-decoration: none;
+  color: var(--text);
+  padding: .3rem .6rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.nav-principal a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+
+/* LISTAS */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.tag-list li {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+}
+
+.lista-processos li { margin-bottom: .5rem; }
+.lista-contato a { color: var(--accent); text-decoration: none; }
+
+
+/* GRID DE HABILIDADES */
+
+.grade-habilidades {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width:720px){
+  .grade-habilidades {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width:1024px){
+  .grade-habilidades {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
+/* PROJETOS */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 1rem;  
+}
+
+.project {
+  background: var(--bg-card);
+  padding: 1.25rem 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0 0 1rem 1rem; /* empurra os cards dentro do grid */
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+}
+
+.project h3 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project p { color: var(--text-muted); }
+
+
+/* FORMULÁRIO */
+
+.form-contato {
+  max-width: 720px;
+  margin: auto;
+}
+
+.form-contato .campo {
+  margin-bottom: .9rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: .6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: var(--accent);
+}
+
+.status-formulario {
+  margin-top: .75rem;
+  color: var(--text-muted);
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.linha-rodape {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cita-rodape {
+  margin-left: auto;
+  font-size: .85rem;
+  max-width: 60%;
+  text-align: right;
+}
+
+
+/* TIPOGRAFIA */
+
+h1,h2,h3 {
+  text-align: center;
+  margin: 0 0 .75rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; color: var(--accent); }
+h3 { font-size: 1.1rem; }
+
+
+/* RESPONSIVO */
+
+@media (max-width:720px){
+
+  .nome { font-size: 1.5rem; }
+
+  .alternar-tema {
+    right: .5rem;
+    top: .5rem;
+  }
+
+  .botao-download {
+    right: 3rem;
+    top: .6rem;
+  }
+
+  .linha-rodape {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cita-rodape {
+    max-width: 100%;
+    text-align: center;
+  }
+
+}

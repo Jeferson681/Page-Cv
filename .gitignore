@@ -1,0 +1,8 @@
+# Editor settings
+.vscode/
+
+# Local Python virtual environment
+.venv/
+
+# Local diagnostic artifacts (not part of the site)
+docs/

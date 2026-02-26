@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Currículo Profissional · Jeferson Oliveira de Sousa" />
+  <title>Jeferson Oliveira de Sousa · Currículo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Header: nome, função, botão de download do CV e controle de tema -->
+  <header class="cabecalho">
+    <h1 class="nome">Jeferson Oliveira de Sousa</h1>
+    <p class="funcao">Estudante de Análise e Desenvolvimento de Sistemas</p>
+    <a class="botao botao-download" href="assets/cv_Jeferson.pdf" download="cv_Jeferson.pdf" target="_blank" rel="noopener" aria-label="Baixar currículo">Baixar Currículo</a>
+    <button id="alternar-tema" class="alternar-tema" aria-label="Alternar tema">
+      <span class="icone-tema" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav-principal" aria-label="Menu principal">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#formacao">Formação</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#processos">Processos &amp; Práticas</a>
+      <a href="#contato">Contato</a>
+      
+    </nav>
+  </header>
+
+  <main class="conteudo container">
+
+    
+    <!-- Sobre: apresentação pessoal e resumo -->
+    <section id="sobre" class="secao">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou estudante de Análise e Desenvolvimento de Sistemas, com foco em evolução técnica contínua e aprendizado sólido de stacks modernas.
+      </p>
+      <p>
+        Tenho interesse em arquitetura de software, boas práticas, testes automatizados e organização modular. Gosto de trabalhar na lógica por trás dos sistemas, entendendo comportamento, fluxo de dados e regras de negócio além da interface.
+      </p>
+      <p>
+        Busco desenvolver sistemas seguros, de fácil manutenção e baseados em princípios de arquitetura limpa. Estou em constante aprimoramento técnico, com foco em qualidade de código, clareza estrutural e evolução sustentável do software.
+      </p>
+    </section>
+
+    
+    <!-- Formação: cursos, estudos e idiomas -->
+    <section id="formacao" class="secao">
+      <h2>Formação</h2>
+      <ul class="lista-processos">
+        <li>
+          <strong>Curso</strong><br>
+          Análise e Desenvolvimento de Sistemas — cursando
+        </li>
+
+        <li>
+          <strong>Estudos independentes</strong><br>
+          Arquitetura de software com organização modular e separação de responsabilidades; documentação técnica estruturada; modelagem de sistemas e definição de contratos; testes focados em qualidade e confiabilidade; padronização e boas práticas de código; integração e entrega contínua; organização e monitoramento de aplicações.
+        </li>
+
+        <li>
+          <strong>Idiomas</strong><br>
+          Inglês — Intermediário <br>
+          Português — Nativo
+        </li>
+      </ul>
+    </section>
+
+    
+    <!-- Habilidades: listagem em grid responsivo -->
+    <section id= "habilidades" class="secao habilidades">
+      <h2>🔹 Habilidades</h2>
+
+      <div class="grade-habilidades">
+        <div class="bloco-habilidade">
+          <h3>Engenharia de Software</h3>
+          <ul class="lista-processos">
+            <li>Arquitetura modular e separação de responsabilidades</li>
+            <li>Organização de código e boas práticas</li>
+            <li>Testes automatizados (unitário, integração, E2E)</li>
+            <li>Cobertura e qualidade de código</li>
+          </ul>
+        </div>
+
+        <div class="bloco-habilidade">
+          <h3>Backend &amp; APIs</h3>
+          <ul class="lista-processos">
+            <li>Desenvolvimento de APIs com FastAPI</li>
+            <li>Estruturação de serviços backend</li>
+            <li>Serialização e contratos de API</li>            
+           </ul>
+        </div>
+
+        <div class="bloco-habilidade">
+          <h3>Qualidade &amp; Segurança</h3>
+          <ul class="lista-processos">
+            <li>Linters e formatação (Ruff, Isort)</li>
+            <li>Análise de segurança (Bandit, Trivy, Snyk)</li>
+            <li>Gerenciamento de dependências e vulnerabilidades (Dependabot, Gitleaks)</li>
+          </ul>
+        </div>
+
+        <div class="bloco-habilidade">
+          <h3>Containers &amp; Ambiente</h3>
+          <ul class="lista-processos">
+            <li>Docker (build, imagem, compose)</li>
+            <li>Ambientes virtuais (venv)</li>
+            <li>Linux / WSL2</li>
+          </ul>
+        </div>
+
+        <div class="bloco-habilidade">
+          <h3>Workflow &amp; Observabilidade</h3>
+          <ul class="lista-processos">
+            <li>Git e fluxo de branches</li>
+            <li>Pull requests e revisão de código</li>
+            <li>Integração CI/CD com AWS</li>
+            <li>Hooks com pre-commit</li>
+            <li>Coleta de métricas e logs</li>
+            <li>Prometheus, Grafana e Loki</li>
+          </ul>
+        </div>
+
+        <div class="bloco-habilidade">
+          <h3>Banco de Dados</h3>
+          <ul class="lista-processos">
+            <li>Modelagem de dados e migrações com Alembic</li>
+            <li>Integração com PostgreSQL</li>
+            <li>Uso de SQLite para desenvolvimento e testes</li>
+            
+          </ul>
+      </div>
+    </section>
+
+    
+    <!-- Portfólio: links para projetos e trabalhos -->
+    <section id="portfolio" class="secao">
+      <h2>Portfólio</h2>
+
+      
+      <div class="projects-grid">
+        <article class="project" data-position="1">
+          <span class="project-pos" aria-hidden="true"></span>
+          <h3>
+            <a href="https://github.com/Jeferson681/infra-monitoring-system" target="_blank" rel="noopener">
+              Infra Monitoring System
+            </a>
+          </h3>
+
+          <p>
+            Projeto didático focado em pipelines e monitoramento: coleta métricas do host via psutil, publica métricas para scraping
+            pelo Prometheus, empacota serviços com Docker para ambientes reproduzíveis e usa GitHub Actions para executar testes,
+            análises de segurança e checks de qualidade.
+          </p>
+        </article>
+
+        <article class="project" data-position="2">
+          <span class="project-pos" aria-hidden="true"></span>
+          <h3>
+            <a href="https://github.com/Jeferson681/JobManage" target="_blank" rel="noopener">
+              JobManage
+            </a>
+          </h3>
+          <p>
+           Sistema de orquestração de jobs com controle de concorrência por lease, máquina de estados, 
+           retry com backoff jittered e coordenação via banco de dados. Construído com FastAPI, SQLite, Alembic,
+            testes automatizados e CI no GitHub Actions, com métricas, health checks e logs estruturados</p>
+        </article>
+      </div>
+
+      </section>
+
+    
+    <!-- Processos: práticas profissionais e ferramentas -->
+    <section id="processos" class="secao">
+      <h2>Processos &amp; Práticas Profissionais</h2>
+      <ul class="lista-processos">
+        <li>Versionamento completo com Git: branches, PRs e histórico limpo.</li>
+        <li>Pipelines no GitHub Actions com testes, lint, análise de segurança e build.</li>
+        <li>Testes automatizados com Pytest e medição de cobertura.</li>
+        <li>Qualidade e segurança: Ruff, Isort, Bandit, Gitleaks, Snyk, Trivy e Dependabot.</li>
+        <li>Containerização com Docker e serviços via Docker Compose.</li>
+        <li>Documentação técnica estruturada em PT e EN.</li>
+        <li>Ambientes isolados e reprodutíveis com venv.</li>
+      </ul>
+    </section>
+
+    
+    <!-- Contato: formulário com validação em JavaScript -->
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+
+      <form id="form-contato" class="form-contato" novalidate>
+        <label class="campo">
+          <span>Nome</span>
+          <input id="nome-contato" name="name" type="text" autocomplete="name" required />
+        </label>
+
+        <label class="campo">
+          <span>E-mail</span>
+          <input id="email-contato" name="email" type="email" autocomplete="email" inputmode="email" required />
+        </label>
+
+        <label class="campo">
+          <span>Mensagem</span>
+          <textarea id="mensagem-contato" name="message" rows="5" required></textarea>
+        </label>
+
+        <button class="botao botao-primario" type="submit">Enviar mensagem</button>
+        <output id="status-form" class="status-formulario" aria-live="polite"></output>
+      </form>
+
+      <ul class="lista-contato">
+        <li><a href="https://www.linkedin.com/in/jeferson-oliveira-de-sousa-ab8764164/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/Jeferson681" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:jefersonoliveiradesousa681@gmail.com" aria-label="Enviar e-mail para Jeferson Oliveira de Sousa">jefersonoliveiradesousa681@gmail.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer: direitos autorais e citação -->
+  <footer class="rodape">
+    <div class="container linha-rodape">
+      <p class="copia-rodape">&copy; <span id="ano"></span> Jeferson Oliveira de Sousa</p>
+      <p class="cita-rodape"><span class="quote-text">“Jamais considere seus estudos como um dever, mas como a invejável oportunidade de aprender a conhecer a beleza libertadora do intelecto, para sua própria alegria pessoal e para o proveito da comunidade à qual seu futuro trabalho pertencer.”</span>
+        <span class="quote-author">— Albert Einstein</span></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
